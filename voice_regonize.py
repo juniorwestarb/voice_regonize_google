@@ -21,13 +21,13 @@ def ouvir():
 
 	try:
 		#Passa o audio para o speech_recognition para aplicação de reconhecimento de padrões
-		frase = microfone.recognize_google(audio,language='pt-BR')
+		frase = microfone.recognize_google(audio, language='pt-BR')
 		print("Você quiz dizer: " + frase)
 
 	except spech.UnkownValueError:
 		print("Não entendi")
 
-	return reconhecimento
+	return frase
 
 reconhecimento = ouvir()
 cria_audio(reconhecimento)
